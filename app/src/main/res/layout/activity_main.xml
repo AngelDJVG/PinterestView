@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/buscadorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnBuscador"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icono_lupa"/>
+
+        <EditText
+            android:id="@+id/buscadorEditText"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/btnBuscador"
+            android:background="#D8D7D7"
+            android:fontFamily="@font/nunito_bold"
+            android:hint=" Search your pins" />
+
+        <Button
+            android:id="@+id/btnMensaje"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/buscadorEditText"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icono_mensaje"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/btnMensaje"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/icono_mas"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnConfiguracion"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/btnPlus"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/icono_configuracion"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoUsuarioLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buscadorLayout"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imagenUsuario"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cat_profile"/>
+
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gatito"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/infoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagenUsuario"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:text="487 followers . 224 following"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoUsuarioLayout"
+        android:orientation="horizontal"
+        android:weightSum="4.5"
+        android:background="@color/white">
+
+
+        <Button
+            android:id="@+id/btnBoards"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:text="Boards"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/btnPins"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:text="Pins"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/btnTried"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:text="Tried"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/btnFollowers"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.5"
+            android:layout_centerVertical="true"
+            android:text="Followers"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
