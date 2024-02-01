@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <RelativeLayout
         android:background="@color/white"
@@ -16,7 +17,8 @@
             android:layout_height="34dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/icono_lupa"/>
+            android:background="@drawable/icono_lupa"
+            />
 
         <EditText
             android:id="@+id/buscadorEditText"
@@ -25,8 +27,10 @@
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/btnBuscador"
             android:background="#D8D7D7"
+            android:textColor="@color/black"
             android:fontFamily="@font/nunito_bold"
-            android:hint=" Search your pins" />
+            android:hint=" Search your pins"
+            android:textColorHint="#5C5C5C"/>
 
         <Button
             android:id="@+id/btnMensaje"
@@ -81,6 +85,7 @@
             android:layout_height="wrap_content"
             android:text="Gatito"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:fontFamily="@font/nunito_extra_bold"
             android:textSize="40sp"/>
 
@@ -89,17 +94,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imagenUsuario"
+            android:textColor="@color/black"
             android:fontFamily="@font/nunito_extra_bold"
             android:text="487 followers . 224 following"
             android:textSize="14sp"/>
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/layoutBotones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/infoUsuarioLayout"
         android:orientation="horizontal"
-        android:weightSum="4.5"
+        android:weightSum="4.3"
         android:background="@color/white">
 
 
@@ -108,7 +115,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:layout_centerVertical="true"
+
             android:text="Boards"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
@@ -118,7 +125,6 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:layout_centerVertical="true"
             android:text="Pins"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
@@ -128,7 +134,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:layout_centerVertical="true"
+
             android:text="Tried"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
@@ -137,8 +143,8 @@
             android:id="@+id/btnFollowers"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight="1.5"
-            android:layout_centerVertical="true"
+            android:layout_weight="1.3"
+
             android:text="Followers"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
@@ -146,5 +152,81 @@
             />
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/collage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutBotones"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/imagen1Collage1"
+            android:layout_width="160dp"
+            android:layout_height="164dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat_profile"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/imagen2Collage1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cat_profile"
+            android:scaleType="fitXY"
+            android:layout_toEndOf="@id/imagen1Collage1"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/imagen3Collage1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cat_profile"
+            android:layout_below="@id/imagen2Collage1"
+            android:scaleType="fitXY"
+            android:layout_toEndOf="@id/imagen1Collage1"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/imagen4Collage1"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat_profile"
+            android:layout_toEndOf="@id/imagen2Collage1"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/imagen5Collage1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cat_profile"
+            android:scaleType="fitXY"
+            android:layout_toEndOf="@id/imagen3Collage1"
+            android:layout_below="@id/imagen4Collage1"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tituloCollage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gatos Ideas"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_extra_bold"
+            android:layout_below="@id/imagen1Collage1"
+            android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/descripcionCollage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 minutes ago"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_light_300"
+            android:layout_below="@id/tituloCollage1"
+            android:textSize="13sp"/>
+    </RelativeLayout>
 
 </RelativeLayout>
