@@ -3,230 +3,451 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
-
-    <RelativeLayout
-        android:background="@color/white"
-        android:id="@+id/buscadorLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBotonesSociales">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridLayout
+                android:background="@color/white"
+                android:id="@+id/buscadorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:columnCount="5">
 
-        <Button
-            android:id="@+id/btnBuscador"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/icono_lupa"
-            />
+                <Button
+                    android:id="@+id/btnBuscador"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/icono_lupa"
+                    android:layout_gravity="center_vertical" />
 
-        <EditText
-            android:id="@+id/buscadorEditText"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@id/btnBuscador"
-            android:background="#D8D7D7"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito_bold"
-            android:hint=" Search your pins"
-            android:textColorHint="#5C5C5C"/>
+                <EditText
+                    android:id="@+id/buscadorEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#D8D7D7"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint=" Search your pins"
+                    android:textColorHint="#5C5C5C"
+                    android:layout_gravity="center_vertical"
+                    />
 
-        <Button
-            android:id="@+id/btnMensaje"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_toEndOf="@id/buscadorEditText"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/icono_mensaje"
-            android:layout_centerVertical="true"/>
+                <Button
+                    android:id="@+id/btnMensaje"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/icono_mensaje"
+                    android:layout_gravity="center_vertical"
+                    />
 
-        <Button
-            android:id="@+id/btnPlus"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_toEndOf="@id/btnMensaje"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/icono_mas"
-            android:layout_centerVertical="true"/>
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/icono_mas"
+                    android:layout_gravity="center_vertical"
+                    />
 
-        <Button
-            android:id="@+id/btnConfiguracion"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_toEndOf="@id/btnPlus"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/icono_configuracion"
-            android:layout_centerVertical="true"/>
+                <Button
+                    android:id="@+id/btnConfiguracion"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/icono_configuracion"
+                    android:layout_gravity="center_vertical"
+                    />
+            </GridLayout>
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/infoUsuarioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buscadorLayout"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
 
-    <RelativeLayout
-        android:id="@+id/infoUsuarioLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buscadorLayout"
-        android:background="@color/white"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp">
-
-        <ImageView
-            android:id="@+id/imagenUsuario"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/cat_profile"/>
+                <ImageView
+                    android:id="@+id/imagenUsuario"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/cat_profile"/>
 
 
-        <TextView
-            android:id="@+id/nombreUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gatito"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito_extra_bold"
-            android:textSize="40sp"/>
+                <TextView
+                    android:id="@+id/nombreUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gatito"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:textSize="40sp"/>
 
-        <TextView
-            android:id="@+id/infoUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imagenUsuario"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito_extra_bold"
-            android:text="487 followers . 224 following"
-            android:textSize="14sp"/>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/infoUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imagenUsuario"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:text="487 followers . 224 following"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBotones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoUsuarioLayout"
+                android:orientation="horizontal"
+                android:weightSum="4.3"
+                android:background="@color/white">
+
+
+                <Button
+                    android:id="@+id/btnBoards"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+
+                    android:text="Boards"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"/>
+                <Button
+                    android:id="@+id/btnPins"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:text="Pins"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"/>
+                <Button
+                    android:id="@+id/btnTried"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+
+                    android:text="Tried"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"/>
+                <Button
+                    android:id="@+id/btnFollowers"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.3"
+
+                    android:text="Followers"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/collage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutBotones"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/descripcionBoards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="49 boards"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_light_300"
+                    android:textSize="13sp"/>
+
+                <ImageView
+                    android:id="@+id/imagen1Collage1"
+                    android:layout_width="160dp"
+                    android:layout_height="164dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_below="@id/descripcionBoards"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen2Collage1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage1"
+                    android:layout_below="@id/descripcionBoards"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen3Collage1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:layout_below="@id/imagen2Collage1"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen4Collage1"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_toEndOf="@id/imagen2Collage1"
+                    android:layout_marginStart="4dp"
+                    android:layout_below="@id/descripcionBoards"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen5Collage1"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen3Collage1"
+                    android:layout_below="@id/imagen4Collage1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/tituloCollage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gatos Ideas"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:layout_below="@id/imagen1Collage1"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/descripcionCollage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 minutes ago"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_light_300"
+                    android:layout_below="@id/tituloCollage1"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/collage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/collage1"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imagen1Collage2"
+                    android:layout_width="160dp"
+                    android:layout_height="164dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen2Collage2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage2"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen3Collage2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:layout_below="@id/imagen2Collage2"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage2"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen4Collage2"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_toEndOf="@id/imagen2Collage2"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen5Collage2"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen3Collage2"
+                    android:layout_below="@id/imagen4Collage2"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/tituloCollage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gatos Ideas"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:layout_below="@id/imagen1Collage2"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/descripcionCollage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 minutes ago"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_light_300"
+                    android:layout_below="@id/tituloCollage2"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/collage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/collage2"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imagen1Collage3"
+                    android:layout_width="160dp"
+                    android:layout_height="164dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen2Collage3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage3"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen3Collage3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_profile"
+                    android:layout_below="@id/imagen2Collage3"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen1Collage3"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen4Collage3"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_profile"
+                    android:layout_toEndOf="@id/imagen2Collage3"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:id="@+id/imagen5Collage3"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cat_profile"
+                    android:scaleType="fitXY"
+                    android:layout_toEndOf="@id/imagen3Collage3"
+                    android:layout_below="@id/imagen4Collage3"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/tituloCollage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gatos Ideas"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_extra_bold"
+                    android:layout_below="@id/imagen1Collage3"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/descripcionCollage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 minutes ago"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito_light_300"
+                    android:layout_below="@id/tituloCollage3"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</ScrollView>
 
     <LinearLayout
-        android:id="@+id/layoutBotones"
+        android:id="@+id/layoutBotonesSociales"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/infoUsuarioLayout"
         android:orientation="horizontal"
-        android:weightSum="4.3"
-        android:background="@color/white">
-
-
+        android:weightSum="4"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
         <Button
-            android:id="@+id/btnBoards"
+            android:id="@+id/btnHome"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-
-            android:text="Boards"
+            android:text="Home"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"/>
         <Button
-            android:id="@+id/btnPins"
+            android:id="@+id/btnFollowing"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="Pins"
+            android:text="Following"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"/>
         <Button
-            android:id="@+id/btnTried"
+            android:id="@+id/btnNotifications"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-
-            android:text="Tried"
+            android:text="Notifications"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"/>
         <Button
-            android:id="@+id/btnFollowers"
+            android:id="@+id/btnSaved"
             android:layout_width="0dp"
             android:layout_height="45dp"
-            android:layout_weight="1.3"
-
-            android:text="Followers"
+            android:layout_weight="1"
+            android:text="Saved"
             android:fontFamily="@font/nunito_bold"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
     </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/collage1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layoutBotones"
-        android:layout_centerHorizontal="true">
-
-        <ImageView
-            android:id="@+id/imagen1Collage1"
-            android:layout_width="160dp"
-            android:layout_height="164dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/cat_profile"
-            android:layout_marginTop="4dp"/>
-
-        <ImageView
-            android:id="@+id/imagen2Collage1"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/cat_profile"
-            android:scaleType="fitXY"
-            android:layout_toEndOf="@id/imagen1Collage1"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"/>
-
-        <ImageView
-            android:id="@+id/imagen3Collage1"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/cat_profile"
-            android:layout_below="@id/imagen2Collage1"
-            android:scaleType="fitXY"
-            android:layout_toEndOf="@id/imagen1Collage1"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"/>
-
-        <ImageView
-            android:id="@+id/imagen4Collage1"
-            android:layout_width="80dp"
-            android:layout_height="110dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/cat_profile"
-            android:layout_toEndOf="@id/imagen2Collage1"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"/>
-
-        <ImageView
-            android:id="@+id/imagen5Collage1"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:src="@drawable/cat_profile"
-            android:scaleType="fitXY"
-            android:layout_toEndOf="@id/imagen3Collage1"
-            android:layout_below="@id/imagen4Collage1"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tituloCollage1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gatos Ideas"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito_extra_bold"
-            android:layout_below="@id/imagen1Collage1"
-            android:textSize="22sp"/>
-        <TextView
-            android:id="@+id/descripcionCollage1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12 minutes ago"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito_light_300"
-            android:layout_below="@id/tituloCollage1"
-            android:textSize="13sp"/>
-    </RelativeLayout>
 
 </RelativeLayout>
