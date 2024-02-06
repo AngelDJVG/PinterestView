@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -16,29 +18,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:columnCount="5">
+                android:columnCount="4">
 
-                <Button
-                    android:id="@+id/btnBuscador"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:background="@drawable/icono_lupa"
-                    android:layout_gravity="center_vertical" />
-
-                <EditText
-                    android:id="@+id/buscadorEditText"
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="8dp"
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:background="#D8D7D7"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/nunito_bold"
-                    android:hint=" Search your pins"
-                    android:textColorHint="#5C5C5C"
-                    android:layout_gravity="center_vertical"
-                    />
+                    android:layout_gravity="center_vertical">
 
-                <Button
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icono_lupa"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <EditText
+                        android:id="@+id/buscadorEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nunito_bold"
+                        android:hint="Search your pins"
+                        android:textColorHint="#5C5C5C"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <ImageButton
                     android:id="@+id/btnMensaje"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
@@ -47,7 +57,7 @@
                     android:layout_gravity="center_vertical"
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnPlus"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
@@ -56,7 +66,7 @@
                     android:layout_gravity="center_vertical"
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnConfiguracion"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
@@ -412,42 +422,63 @@
         android:weightSum="4"
         android:background="@color/white"
         android:layout_alignParentBottom="true">
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Home"
-            android:fontFamily="@font/nunito_bold"
+            android:text="home"
+            android:textSize="10sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/icono_pinterest"
+            app:iconSize="24dp"
+            app:iconPadding="8dp"
+            android:backgroundTint="@android:color/white"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
-        <Button
-            android:id="@+id/btnFollowing"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+            app:iconTint="#FF0000"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Following"
-            android:fontFamily="@font/nunito_bold"
+            android:text="following"
+            android:textSize="10sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/icono_2personas"
+            app:iconSize="24dp"
+            app:iconPadding="8dp"
+            android:backgroundTint="@android:color/white"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
-        <Button
-            android:id="@+id/btnNotifications"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+            app:iconTint="#555555"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Notifications"
-            android:fontFamily="@font/nunito_bold"
+            android:text="notifications"
+            android:textSize="10sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/icono_notificaciones"
+            app:iconSize="24dp"
+            app:iconPadding="8dp"
+            android:backgroundTint="@android:color/white"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
-        <Button
-            android:id="@+id/btnSaved"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+            app:iconTint="#555555"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Saved"
-            android:fontFamily="@font/nunito_bold"
+            android:text="saved"
+            android:textSize="10sp"
+            app:iconGravity="textTop"
+            app:icon="@drawable/cat_profile"
+            app:iconTintMode="screen"
+            app:iconSize="24dp"
+            app:iconPadding="8dp"
+            android:backgroundTint="@android:color/white"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white" />
+            app:iconTint="#000000"
+            />
     </LinearLayout>
 
 </RelativeLayout>
