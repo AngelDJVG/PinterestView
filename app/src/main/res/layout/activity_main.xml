@@ -498,9 +498,10 @@
             app:iconGravity="textTop"
             app:icon="@drawable/icono_catprofile_circle"
             app:iconTintMode="multiply"
+            app:iconTint="@color/white"
             app:iconSize="24dp"
             app:iconPadding="8dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="@android:color/background_light"
             android:textColor="@color/black"
              />
     </LinearLayout>
