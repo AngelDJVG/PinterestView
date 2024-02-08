@@ -86,12 +86,37 @@
                 android:paddingRight="16dp"
                 android:paddingBottom="16dp">
 
-                <ImageView
-                    android:id="@+id/imagenUsuario"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/cat_profile"/>
+                <FrameLayout
+                    android:id="@+id/imagenUsuarioYCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:id="@+id/checkImagen"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="4dp"
+                        android:elevation="3dp"
+                        android:src="@drawable/icono_checkrojo" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardviewImagenUsuario"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp">
+
+                        <ImageView
+                            android:id="@+id/imagenUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat_profile" />
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
 
 
                 <TextView
@@ -108,7 +133,7 @@
                     android:id="@+id/infoUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/imagenUsuario"
+                    android:layout_below="@id/imagenUsuarioYCheck"
                     android:textColor="@color/black"
                     android:fontFamily="@font/nunito_extra_bold"
                     android:text="487 followers . 224 following"
@@ -188,7 +213,7 @@
                     android:layout_width="160dp"
                     android:layout_height="164dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat1"
                     android:layout_below="@id/descripcionBoards"
                     android:layout_marginTop="4dp"/>
 
@@ -196,7 +221,7 @@
                     android:id="@+id/imagen2Collage1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat2"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage1"
                     android:layout_below="@id/descripcionBoards"
@@ -207,7 +232,7 @@
                     android:id="@+id/imagen3Collage1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat3"
                     android:layout_below="@id/imagen2Collage1"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage1"
@@ -219,7 +244,7 @@
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat4"
                     android:layout_toEndOf="@id/imagen2Collage1"
                     android:layout_marginStart="4dp"
                     android:layout_below="@id/descripcionBoards"
@@ -229,7 +254,7 @@
                     android:id="@+id/imagen5Collage1"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat5"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen3Collage1"
                     android:layout_below="@id/imagen4Collage1"
@@ -268,14 +293,14 @@
                     android:layout_width="160dp"
                     android:layout_height="164dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat6"
                     android:layout_marginTop="4dp"/>
 
                 <ImageView
                     android:id="@+id/imagen2Collage2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat7"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage2"
                     android:layout_marginStart="4dp"
@@ -285,7 +310,7 @@
                     android:id="@+id/imagen3Collage2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat8"
                     android:layout_below="@id/imagen2Collage2"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage2"
@@ -297,7 +322,7 @@
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat9"
                     android:layout_toEndOf="@id/imagen2Collage2"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="4dp"/>
@@ -306,7 +331,7 @@
                     android:id="@+id/imagen5Collage2"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat10"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen3Collage2"
                     android:layout_below="@id/imagen4Collage2"
@@ -317,7 +342,7 @@
                     android:id="@+id/tituloCollage2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gatos Ideas"
+                    android:text="CATS"
                     android:textColor="@color/black"
                     android:fontFamily="@font/nunito_extra_bold"
                     android:layout_below="@id/imagen1Collage2"
@@ -326,7 +351,7 @@
                     android:id="@+id/descripcionCollage2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12 minutes ago"
+                    android:text="5 hours ago"
                     android:textColor="@color/black"
                     android:fontFamily="@font/nunito_light_300"
                     android:layout_below="@id/tituloCollage2"
@@ -345,14 +370,14 @@
                     android:layout_width="160dp"
                     android:layout_height="164dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat11"
                     android:layout_marginTop="4dp"/>
 
                 <ImageView
                     android:id="@+id/imagen2Collage3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat12"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage3"
                     android:layout_marginStart="4dp"
@@ -362,7 +387,7 @@
                     android:id="@+id/imagen3Collage3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat13"
                     android:layout_below="@id/imagen2Collage3"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen1Collage3"
@@ -374,7 +399,7 @@
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat14"
                     android:layout_toEndOf="@id/imagen2Collage3"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="4dp"/>
@@ -383,7 +408,7 @@
                     android:id="@+id/imagen5Collage3"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/cat_profile"
+                    android:src="@drawable/cat15"
                     android:scaleType="fitXY"
                     android:layout_toEndOf="@id/imagen3Collage3"
                     android:layout_below="@id/imagen4Collage3"
@@ -394,7 +419,7 @@
                     android:id="@+id/tituloCollage3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gatos Ideas"
+                    android:text="Handsome cats"
                     android:textColor="@color/black"
                     android:fontFamily="@font/nunito_extra_bold"
                     android:layout_below="@id/imagen1Collage3"
@@ -403,7 +428,7 @@
                     android:id="@+id/descripcionCollage3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12 minutes ago"
+                    android:text="55 minutes ago"
                     android:textColor="@color/black"
                     android:fontFamily="@font/nunito_light_300"
                     android:layout_below="@id/tituloCollage3"
@@ -426,7 +451,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="home"
+            android:text="Home"
             android:textSize="10sp"
             app:iconGravity="textTop"
             app:icon="@drawable/icono_pinterest"
@@ -440,7 +465,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="following"
+            android:text="Following"
             android:textSize="10sp"
             app:iconGravity="textTop"
             app:icon="@drawable/icono_2personas"
@@ -454,7 +479,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="notifications"
+            android:text="Notifications"
             android:textSize="10sp"
             app:iconGravity="textTop"
             app:icon="@drawable/icono_notificaciones"
@@ -468,17 +493,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="saved"
+            android:text="Saved"
             android:textSize="10sp"
             app:iconGravity="textTop"
-            app:icon="@drawable/cat_profile"
-            app:iconTintMode="screen"
+            app:icon="@drawable/icono_catprofile_circle"
+            app:iconTintMode="multiply"
             app:iconSize="24dp"
             app:iconPadding="8dp"
             android:backgroundTint="@android:color/white"
             android:textColor="@color/black"
-            app:iconTint="#000000"
-            />
+             />
     </LinearLayout>
 
 </RelativeLayout>
